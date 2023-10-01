@@ -26,7 +26,9 @@ export default function App() {
   }
 
   function hanldeClear(){
-    setItems(() => [])
+    const confirmed = window.confirm('Are you sure you want to delete all items?')
+
+    if(confirmed) setItems([])
   }
 
   return (
